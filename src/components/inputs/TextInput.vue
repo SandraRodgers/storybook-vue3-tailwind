@@ -2,7 +2,9 @@
   <div class="w-full flex flex-col gap-1">
     <label :for="id || name">{{ label }}</label>
     <input
-      :type="search"
+      :name="name"
+      :id="id || name"
+      :type="type"
       :placeholder="placeholder"
       class="w-full rounded-lg bg-white border border-black text-black p-2 h-12"
     />
