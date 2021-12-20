@@ -12,19 +12,29 @@
         p-4
       "
     >
-      <div class="flex gap-4">
+      <div class="flex flex-col items-center justify-center gap-4">
         <img
           src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=50?d=mm"
           alt="Avatar"
           class="rounded-full w-12 h-12 shadow-md"
         />
-        <div>
+        <div class="text-center">
           <a href="#" class="font-bold text-lg">John David Smith</a>
           <div class="text-indigo-700">
             <div class="text-xs">Member since Fri Nov 13th, 2021</div>
-            <div v-if="request" class="flex items-center text-sm gap-8 mt-4">
-              <a href="#" class="text-green-500 hover:opacity-80">Accept</a>
-              <a href="#" class="text-red-600 hover:opacity-80">Decline</a>
+            <div v-if="request" class="flex items-center text-sm gap-2 mt-4">
+              <x-button-element
+                label="Accept"
+                icon="fas fa-check-circle"
+                success
+                small
+              />
+              <x-button-element
+                label="Decline"
+                icon="fas fa-minus-circle"
+                danger
+                small
+              />
             </div>
           </div>
         </div>
@@ -37,8 +47,13 @@
 </template>
 
 <script>
+import Button from '../elements/ButtonElement.vue'
+
 export default {
   name: 'UserCard',
+  components: {
+    'x-button-element': Button
+  },
   props: {
     friend: {
       type: Boolean,

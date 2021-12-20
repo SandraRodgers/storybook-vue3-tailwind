@@ -8,6 +8,10 @@ export default {
   argTypes: {
     label: { control: 'text' },
     secondary: { control: 'boolean' },
+    icon: { control: 'text' },
+    small: { control: 'boolean' },
+    success: { control: 'boolean' },
+    danger: { control: 'boolean' },
   },
 };
 
@@ -34,4 +38,24 @@ export const WithIcon = Template.bind({});
 WithIcon.args = {
   label: 'Create',
   icon: 'fas fa-plus-circle'
+};
+
+export const IsSmall = Template.bind({});
+IsSmall.args = {
+  label: 'Accept',
+  small: true
+};
+
+export const Success = Template.bind({});
+Success.args = {
+  label: 'Success',
+  success: true,
+  small: true
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  label: 'Danger',
+  danger: true,
+  small: true
 };

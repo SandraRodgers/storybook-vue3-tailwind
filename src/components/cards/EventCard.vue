@@ -16,8 +16,18 @@
         </div>
       </a>
       <div class="flex justify-around items-center mt-4">
-        <a href="#" class="text-green-500 hover:opacity-80">Accept</a>
-        <a href="#" class="text-red-600 hover:opacity-80">Decline</a>
+        <x-button-element
+          label="Accept"
+          icon="fas fa-check-circle"
+          success
+          small
+        />
+        <x-button-element
+          label="Decline"
+          icon="fas fa-minus-circle"
+          danger
+          small
+        />
       </div>
     </div>
     <div
@@ -35,6 +45,7 @@
           class="w-full h-40 object-cover"
         />
         <div
+          v-if="!invitedBy"
           :class="{
             'bg-indigo-700 hover:bg-indigo-600': !going,
             'bg-green-500 hover:bg-green-400': going,
@@ -96,8 +107,13 @@
 </template>
 
 <script>
+import Button from '../elements/ButtonElement.vue'
+
 export default {
   name: 'EventCard',
+  components: {
+    'x-button-element': Button
+  },
   props: {
     going: {
       type: Boolean,
