@@ -51,6 +51,10 @@ export default {
     danger: {
       type: Boolean,
       default: false
+    },
+    fullWidth: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
@@ -62,7 +66,8 @@ export default {
         'text-xs py-1': props.small,
         'text-md py-2': !props.small,
         'bg-green-200 text-green-600 border border-green-600': props.success,
-        'bg-red-200 text-red-600 border border-red-600': props.danger
+        'bg-red-200 text-red-600 border border-red-600': props.danger,
+        'w-full': props.fullWidth
       }))
     }
   }

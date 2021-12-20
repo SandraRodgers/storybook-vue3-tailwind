@@ -12,6 +12,7 @@ export default {
     small: { control: 'boolean' },
     success: { control: 'boolean' },
     danger: { control: 'boolean' },
+    fullWidth: { control: 'boolean' },
   },
 };
 
@@ -58,4 +59,10 @@ Danger.args = {
   label: 'Danger',
   danger: true,
   small: true
+};
+
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  label: 'Danger',
+  fullWidth: true,
 };
