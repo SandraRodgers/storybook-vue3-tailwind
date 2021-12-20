@@ -6,7 +6,6 @@
         md:items-stretch
         h-screen
         min-h-screen
-        overflow-scroll
         w-full
         md:w-72
         absolute
