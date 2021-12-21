@@ -4,7 +4,7 @@
       rounded-full
       shadow-lg
       px-4
-      hover:opacity-80
+      hover:brightness-125
       transition
       duration-200
       ease-in-out
