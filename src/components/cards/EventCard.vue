@@ -2,7 +2,7 @@
   <div class="w-full lg:w-1/2 xl:w-1/3 flex flex-col p-3">
     <div
       v-if="invitedBy"
-      class="rounded-t-lg border-x border-t border-gray-100 p-4"
+      class="bg-white rounded-t-lg border-x border-t border-gray-100 p-4"
     >
       <a href="#" class="text-indigo-700 flex items-center gap-4">
         <img
@@ -15,20 +15,6 @@
           <strong>{{ invitedBy }}</strong>
         </div>
       </a>
-      <div class="flex justify-around items-center mt-4">
-        <x-button-element
-          label="Accept"
-          icon="fas fa-check-circle"
-          success
-          small
-        />
-        <x-button-element
-          label="Decline"
-          icon="fas fa-minus-circle"
-          danger
-          small
-        />
-      </div>
     </div>
     <div
       class="
@@ -40,62 +26,96 @@
       "
     >
       <div class="relative">
+        <div
+          v-if="!isMine"
+          class="absolute top-3 right-3 flex items-center gap-3"
+        >
+          <i
+            v-if="notGoing || !statusMessage"
+            class="
+              fas
+              fa-check-circle
+              rounded-full
+              text-white
+              bg-green-500
+              border-2 border-white
+              shadow-md
+              p-1
+              cursor-pointer
+              transition
+              duration-200
+              ease-in-out
+              hover:shadow-lg hover:-translate-y-1
+            "
+          ></i>
+          <i
+            v-if="going || !statusMessage"
+            class="
+              fas
+              fa-minus-circle
+              rounded-full
+              text-white
+              bg-red-500
+              border-2 border-white
+              shadow-md
+              p-1
+              cursor-pointer
+              transition
+              duration-200
+              ease-in-out
+              hover:shadow-lg hover:-translate-y-1
+            "
+          ></i>
+        </div>
+
         <img
           src="https://picsum.photos/300/200"
           class="w-full h-40 object-cover"
         />
         <div
-          v-if="!invitedBy"
+          v-if="statusMessage"
           :class="{
-            'bg-indigo-700 hover:bg-indigo-600': !going,
-            'bg-green-500 hover:bg-green-400': going,
-            'bg-red-600 hover:bg-red-500': declined
+            'bg-green-500': going,
+            'bg-red-500': notGoing
           }"
           class="
-            w-6
-            h-6
-            flex
-            items-center
-            justify-center
+            border-4 border-white
             rounded-full
-            shadow-md
             text-white
             absolute
-            -bottom-6
-            right-6
-            p-6
+            -bottom-4
+            left-1/2
+            transform
+            -translate-x-1/2
+            py-2
+            px-4
             z-10
-            cursor-pointer
-            text-3xl
+            text-sm
             font-bold
-            hover:shadow-lg hover:-translate-y-1
-            transition
-            duration-200
-            ease-in-out
+            select-none
+            text-center
+            w-48
           "
         >
-          <span
-            class="fas"
-            :class="{
-              'fa-plus': !going && !declined,
-              'fa-check': going,
-              'fa-minus': declined
-            }"
-          ></span>
+          {{ statusMessage }}
         </div>
       </div>
-      <div class="flex flex-col gap-3 p-4">
-        <div class="font-bold text-lg">
-          <a href="#">Title of the Event</a>
+      <div class="flex flex-col gap-3 p-4 mt-2">
+        <div class="font-bold">
+          <a href="#" class="block text-lg">Title of the Big Event</a>
+          <div class="text-gray-600 text-xs">by John David Smith</div>
         </div>
         <div class="flex flex-col gap-2 text-sm">
           <div class="font-bold text-indigo-700">Fri, Dec 17, 10:00 PM</div>
           <div class="text-gray-600">
-            3243 Players Club Cir, Memphis, TN, 38618
+            <strong>Location Name</strong>
+            <p class="text-xs">3243 Players Club Cir, Memphis, TN, 38618</p>
           </div>
-          <div class="text-green-600 text-xs">Cost: $15</div>
-          <div class="flex items-center justify-between font-bold mt-3">
-            <div>John David Smith</div>
+          <div class="flex items-center justify-between font-bold mt-2">
+            <div class="text-green-600">
+              Cost:
+              <i class="fas fa-dollar-sign"></i>15
+            </div>
             <div class="text-indigo-700">
               <i class="fas fa-users"></i> 24 Going
             </div>
@@ -119,13 +139,27 @@ export default {
       type: Boolean,
       default: false
     },
-    declined: {
+    notGoing: {
       type: Boolean,
       default: false
     },
     invitedBy: {
       type: String,
       default: ''
+    },
+    isMine: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    statusMessage() {
+      if (this.going) {
+        return 'You are going!'
+      } else if (this.notGoing) {
+        return "You aren't going."
+      }
+      return ''
     }
   }
 }

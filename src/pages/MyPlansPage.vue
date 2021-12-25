@@ -29,16 +29,16 @@
       </div>
     </div>
     <div class="flex flex-col sm:flex-row flex-wrap -m-3">
-      <x-event-card />
-      <x-event-card going />
-      <x-event-card declined />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
+      <x-event-card is-mine />
     </div>
   </x-with-sidebar-layout>
 </template>

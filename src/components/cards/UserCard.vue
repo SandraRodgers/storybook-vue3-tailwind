@@ -22,25 +22,15 @@
           <a href="#" class="font-bold text-lg">John David Smith</a>
           <div class="text-indigo-700">
             <div class="text-xs">Member since Fri Nov 13th, 2021</div>
-            <div v-if="request" class="flex items-center text-sm gap-2 mt-4">
-              <x-button-element
-                label="Accept"
-                icon="fas fa-check-circle"
-                success
-                small
-              />
-              <x-button-element
-                label="Decline"
-                icon="fas fa-minus-circle"
-                danger
-                small
-              />
-            </div>
           </div>
         </div>
       </div>
       <div v-if="friend" class="text-sm text-center text-gray-400">
         Friends since Fri Nov 13th, 2021
+      </div>
+      <div v-if="friendRequest" class="flex items-center justify-center gap-4">
+        <x-button-element label="Accept" small success />
+        <x-button-element label="Decline" small danger />
       </div>
     </div>
   </div>
@@ -59,7 +49,7 @@ export default {
       type: Boolean,
       default: false
     },
-    request: {
+    friendRequest: {
       type: Boolean,
       default: false
     }

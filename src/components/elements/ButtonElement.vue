@@ -4,7 +4,7 @@
       rounded-full
       shadow-lg
       px-4
-      hover:brightness-125
+      hover:brightness-90
       transition
       duration-200
       ease-in-out
@@ -65,8 +65,8 @@ export default {
         'bg-indigo-700 text-white border border-indigo-900': !props.secondary,
         'text-xs py-1': props.small,
         'text-md py-2': !props.small,
-        'bg-green-200 text-green-600 border border-green-600': props.success,
-        'bg-red-200 text-red-600 border border-red-600': props.danger,
+        'bg-green-500 text-white border border-green-600': props.success,
+        'bg-red-500 text-white border border-red-600': props.danger,
         'w-full': props.fullWidth
       }))
     }

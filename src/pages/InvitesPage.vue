@@ -29,9 +29,9 @@
       </div>
     </div>
     <div class="flex flex-col sm:flex-row flex-wrap -m-3">
+      <x-event-card invited-by="John David Smith" going />
+      <x-event-card invited-by="John David Smith" not-going />
       <x-event-card invited-by="John David Smith" />
-      <x-event-card going invited-by="John David Smith" />
-      <x-event-card declined invited-by="John David Smith" />
       <x-event-card invited-by="John David Smith" />
       <x-event-card invited-by="John David Smith" />
       <x-event-card invited-by="John David Smith" />

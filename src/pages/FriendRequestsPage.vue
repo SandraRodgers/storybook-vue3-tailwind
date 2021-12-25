@@ -26,16 +26,16 @@
       </div>
     </div>
     <div class="flex flex-col sm:flex-row flex-wrap -m-3">
-      <x-user-card request />
-      <x-user-card request />
-      <x-user-card request />
-      <x-user-card request />
-      <x-user-card request />
-      <x-user-card request />
-      <x-user-card request />
-      <x-user-card request />
-      <x-user-card request />
-      <x-user-card request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
+      <x-user-card friend-request />
     </div>
   </x-with-sidebar-layout>
 </template>
