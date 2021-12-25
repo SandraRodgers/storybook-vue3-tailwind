@@ -26,6 +26,7 @@
         </div>
       </div>
       <div
+        v-if="!isPrivate"
         class="
           flex
           items-end
@@ -84,7 +85,22 @@
         </label>
       </div>
     </div>
-    <div class="mt-4">
+    <div
+      v-if="isPrivate"
+      class="
+        flex flex-col
+        items-center
+        justify-center
+        gap-2
+        text-gray-600
+        my-12
+      "
+    >
+      <i class="fas fa-lock text-8xl text-gray-200"></i>
+      <p class="font-bold text-lg">This account is private.</p>
+      <p class="text-md">You will not be able to view this user's profile.</p>
+    </div>
+    <div v-else class="mt-4">
       <div v-show="selection === 'plans'">
         <h2 class="text-xl font-bold mb-4">John's Plans</h2>
         <x-flex-wrap>
@@ -118,6 +134,12 @@ import FlexWrap from '../layouts/FlexWrap.vue'
 
 export default {
   name: 'UserPage',
+  props: {
+    isPrivate: {
+      type: Boolean,
+      default: false
+    }
+  },
   components: {
     'x-event-card': EventCard,
     'x-with-sidebar-layout': WithSidebarLayout,
