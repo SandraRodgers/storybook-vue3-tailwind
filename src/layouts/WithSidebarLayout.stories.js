@@ -1,4 +1,4 @@
-require('../../styles/main.css');
+require('../styles/main.css');
 
 import WithSidebarLayout from './WithSidebarLayout.vue';
 

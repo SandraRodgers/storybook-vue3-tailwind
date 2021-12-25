@@ -1,0 +1,132 @@
+<template>
+  <x-with-sidebar-layout>
+    <div
+      class="
+        flex flex-col
+        lg:flex-row
+        items-center
+        lg:items-end
+        justify-between
+        gap-4
+        border-b border-gray-200
+        pb-4
+      "
+    >
+      <div class="flex flex-col items-center md:flex-row md:items-end gap-4">
+        <img
+          src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=50?d=mm"
+          alt="Avatar"
+          class="rounded-full w-24 h-24 shadow-md"
+        />
+        <div class="flex flex-col">
+          <h1 class="text-2xl font-bold">John David Smith</h1>
+          <div class="text-indigo-700">
+            <div class="text-xs">Member since Fri Nov 13th, 2021</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="
+          flex
+          items-end
+          justify-end
+          gap-6
+          text-gray-600
+          border-t border-gray-200
+          pt-4
+          px-4
+        "
+      >
+        <label
+          class="hover:text-indigo-700 cursor-pointer"
+          :class="{
+            'font-bold text-indigo-700': selection === 'plans'
+          }"
+        >
+          <input
+            class="hidden"
+            v-model="selection"
+            type="radio"
+            name="selection"
+            value="plans"
+          />
+          Plans
+        </label>
+        <label
+          class="hover:text-indigo-700 cursor-pointer"
+          :class="{
+            'font-bold text-indigo-700': selection === 'attending'
+          }"
+        >
+          <input
+            class="hidden"
+            v-model="selection"
+            type="radio"
+            name="selection"
+            value="attending"
+          />
+          Attending
+        </label>
+        <label
+          class="hover:text-indigo-700 cursor-pointer"
+          :class="{
+            'font-bold text-indigo-700': selection === 'attended'
+          }"
+        >
+          <input
+            class="hidden"
+            v-model="selection"
+            type="radio"
+            name="selection"
+            value="attended"
+          />
+          Attended
+        </label>
+      </div>
+    </div>
+    <div class="mt-4">
+      <div v-show="selection === 'plans'">
+        <h2 class="text-xl font-bold mb-4">John's Plans</h2>
+        <x-flex-wrap>
+          <x-event-card />
+          <x-event-card />
+        </x-flex-wrap>
+      </div>
+      <div v-show="selection === 'attending'">
+        <h2 class="text-xl font-bold mb-4">Attending</h2>
+        <x-flex-wrap>
+          <x-event-card />
+        </x-flex-wrap>
+      </div>
+      <div v-show="selection === 'attended'">
+        <h2 class="text-xl font-bold mb-4">Attended</h2>
+        <x-flex-wrap>
+          <x-event-card />
+          <x-event-card />
+          <x-event-card />
+          <x-event-card />
+        </x-flex-wrap>
+      </div>
+    </div>
+  </x-with-sidebar-layout>
+</template>
+
+<script>
+import EventCard from '../components/cards/EventCard.vue'
+import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
+import FlexWrap from '../layouts/FlexWrap.vue'
+
+export default {
+  name: 'UserPage',
+  components: {
+    'x-event-card': EventCard,
+    'x-with-sidebar-layout': WithSidebarLayout,
+    'x-flex-wrap': FlexWrap
+  },
+  data() {
+    return {
+      selection: 'plans'
+    }
+  }
+}
+</script>

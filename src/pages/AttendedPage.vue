@@ -47,7 +47,7 @@ import ButtonElement from '../components/elements/ButtonElement.vue'
 import EventCard from '../components/cards/EventCard.vue'
 import SelectInput from '../components/inputs/SelectInput.vue'
 import TextInput from '../components/inputs/TextInput.vue'
-import WithSidebarLayout from '../components/layouts/WithSidebarLayout.vue'
+import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 
 export default {
   name: 'AttendedPage',

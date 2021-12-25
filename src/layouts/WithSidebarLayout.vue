@@ -112,9 +112,9 @@
 </template>
 
 <script>
-import HeaderBar from '../bars/HeaderBar.vue'
-import FooterBar from '../bars/FooterBar.vue'
-import SideBar from '../bars/SideBar.vue'
+import HeaderBar from '../components/bars/HeaderBar.vue'
+import FooterBar from '../components/bars/FooterBar.vue'
+import SideBar from '../components/bars/SideBar.vue'
 
 export default {
   name: 'WithSidebarLayout',
