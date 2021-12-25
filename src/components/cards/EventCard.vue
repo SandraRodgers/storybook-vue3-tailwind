@@ -45,7 +45,7 @@
               transition
               duration-200
               ease-in-out
-              hover:shadow-lg hover:-translate-y-1
+              hover:shadow-lg hover:-translate-y-1 hover:bg-green-600
             "
           ></i>
           <i
@@ -63,7 +63,7 @@
               transition
               duration-200
               ease-in-out
-              hover:shadow-lg hover:-translate-y-1
+              hover:shadow-lg hover:-translate-y-1 hover:bg-red-600
             "
           ></i>
         </div>
