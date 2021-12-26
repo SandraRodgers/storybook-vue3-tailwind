@@ -6,6 +6,7 @@ export default {
     title: 'Pages/EventPage',
     component: EventPage,
     argTypes: {
+        isPrivate: { control: 'boolean' },
     },
     parameters: {
         layout: 'fullscreen'
@@ -22,4 +23,9 @@ const Template = (args) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
+};
+
+export const isPrivate = Template.bind({});
+isPrivate.args = {
+    isPrivate: true,
 };
