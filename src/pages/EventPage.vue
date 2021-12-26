@@ -21,16 +21,25 @@
     <!-- end private event -->
 
     <!-- public event -->
-    <div v-else class="rounded-lg rounded-tl-3xl shadow-md bg-gray-100">
-      <div class="flex">
+    <div v-else class="rounded-lg lg:rounded-tl-3xl shadow-md bg-gray-100">
+      <div class="flex flex-col lg:flex-row">
         <img
           src="https://picsum.photos/800/600"
-          class="w-3/5 h-80 object-cover rounded-tl-3xl rounded-br-3xl"
+          class="
+            w-full
+            lg:w-3/5
+            h-80
+            object-cover
+            rounded-t-lg
+            lg:rounded-tl-3xl lg:rounded-br-3xl
+          "
         />
         <div
           class="
-            w-2/5
+            w-full
+            lg:w-2/5
             flex flex-col
+            gap-8
             justify-between
             rounded-tr-lg
             font-bold
@@ -47,15 +56,24 @@
               by <a href="#">John David Smith</a>
             </div>
           </div>
-          <div class="flex items-center gap-4 border-b border-gray-200 pb-8">
+          <div
+            class="
+              flex flex-col
+              xl:flex-row
+              items-center
+              gap-4
+              border-b border-gray-200
+              pb-8
+            "
+          >
             <x-button-element label="I'm Going" success full-width />
             <x-button-element label="I'm Not Going" danger full-width />
           </div>
         </div>
       </div>
       <div>
-        <div class="flex">
-          <div class="w-3/5 p-8">
+        <div class="flex flex-col-reverse lg:flex-row">
+          <div class="w-full lg:w-3/5 p-8">
             <div class="text-justify text-gray-500 text-sm">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Reprehenderit eius sunt aspernatur, possimus nisi totam vitae,
@@ -72,7 +90,7 @@
               dolor!
             </div>
           </div>
-          <div class="flex flex-col gap-8 w-2/5 p-8">
+          <div class="flex flex-col gap-8 w-full lg:w-2/5 p-8">
             <div>
               <div class="text-gray-500">
                 <p class="font-bold text-indigo-700">
