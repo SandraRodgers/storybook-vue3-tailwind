@@ -36,6 +36,7 @@
           "
         ></i>
         <h4 class="font-bold border-b border-gray-200 pb-2">
+          <i class="fas fa-envelope text-gray-400 mr-2"></i>
           This is the message title
         </h4>
         <p class="text-sm">
@@ -45,7 +46,10 @@
           incidunt error, quos ex odio dolorum quam cumque cupiditate
           consectetur. Fuga, voluptate!
         </p>
-        <a href="#" class="font-bold text-xs mt-4">Read More...</a>
+        <div class="flex justify-between items-center text-xs">
+          <a href="#" class="block font-bold mt-4">Read More...</a>
+          <div>Yesterday</div>
+        </div>
       </div>
       <div
         class="
@@ -76,6 +80,7 @@
           "
         ></i>
         <h4 class="font-bold border-b border-gray-200 pb-2">
+          <i class="fas fa-envelope-open text-gray-400 mr-2"></i>
           This is the message title
         </h4>
         <p class="text-sm">
@@ -85,7 +90,10 @@
           incidunt error, quos ex odio dolorum quam cumque cupiditate
           consectetur. Fuga, voluptate!
         </p>
-        <a href="#" class="font-bold text-xs mt-4">Read More...</a>
+        <div class="flex justify-between items-center text-xs">
+          <a href="#" class="block font-bold mt-4">Read More...</a>
+          <div>1 month ago</div>
+        </div>
       </div>
       <div
         class="
@@ -116,6 +124,7 @@
           "
         ></i>
         <h4 class="font-bold border-b border-gray-200 pb-2">
+          <i class="fas fa-envelope-open text-gray-400 mr-2"></i>
           This is the message title
         </h4>
         <p class="text-sm">
@@ -125,7 +134,10 @@
           incidunt error, quos ex odio dolorum quam cumque cupiditate
           consectetur. Fuga, voluptate!
         </p>
-        <a href="#" class="font-bold text-xs mt-4">Read More...</a>
+        <div class="flex justify-between items-center text-xs">
+          <a href="#" class="block font-bold mt-4">Read More...</a>
+          <div>3 months ago</div>
+        </div>
       </div>
     </div>
   </x-with-sidebar-layout>
