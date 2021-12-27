@@ -21,7 +21,15 @@
     <!-- end private event -->
 
     <!-- public event -->
-    <div v-else class="rounded-lg lg:rounded-tl-3xl shadow-md bg-gray-100">
+    <div
+      v-else
+      class="
+        rounded-lg
+        lg:rounded-tr-none lg:rounded-tl-3xl
+        shadow-md
+        bg-gray-100
+      "
+    >
       <div class="flex flex-col lg:flex-row">
         <img
           src="https://picsum.photos/800/600"
@@ -31,7 +39,7 @@
             h-80
             object-cover
             rounded-t-lg
-            lg:rounded-tl-3xl lg:rounded-br-3xl
+            lg:rounded-tr-none lg:rounded-tl-3xl lg:rounded-br-3xl
           "
         />
         <div

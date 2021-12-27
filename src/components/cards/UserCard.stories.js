@@ -7,7 +7,7 @@ export default {
   component: UserCard,
   argTypes: {
     friend: { control: 'boolean' },
-    request: { control: 'boolean' },
+    friendRequest: { control: 'boolean' },
   },
 };
 
@@ -28,7 +28,7 @@ isFriend.args = {
   friend: true,
 };
 
-export const isRequest = Template.bind({});
-isRequest.args = {
-  request: true,
+export const isFriendRequeset = Template.bind({});
+isFriendRequeset.args = {
+  friendRequest: true,
 };

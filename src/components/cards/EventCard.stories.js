@@ -7,7 +7,9 @@ export default {
   component: EventCard,
   argTypes: {
     going: { control: 'boolean' },
-    declined: { control: 'boolean' },
+    notGoing: { control: 'boolean' },
+    isMine: { control: 'boolean' },
+    invitedBy: { control: 'text' },
   },
 };
 
@@ -28,9 +30,14 @@ isGoing.args = {
   going: true
 };
 
-export const isDeclined = Template.bind({});
-isDeclined.args = {
-  declined: true
+export const isNotGoing = Template.bind({});
+isNotGoing.args = {
+  notGoing: true
+};
+
+export const isMine = Template.bind({});
+isMine.args = {
+  isMine: true
 };
 
 export const invitedBy = Template.bind({});
