@@ -1,6 +1,6 @@
 <template>
   <x-with-sidebar-layout>
-    <div class="flex items-center justify-between">
+    <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
       <h2 class="block font-bold text-xl">You have 3 messages</h2>
       <div class="flex items-center gap-4">
         <x-button-element label="Mark all as read" />
@@ -8,8 +8,8 @@
     </div>
     <div class="flex flex-col gap-4 mt-8">
       <x-notification-card />
-      <x-notification-card />
-      <x-notification-card />
+      <x-notification-card read />
+      <x-notification-card read />
     </div>
   </x-with-sidebar-layout>
 </template>

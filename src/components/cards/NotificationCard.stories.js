@@ -23,6 +23,6 @@ Primary.args = {
 };
 
 export const isRead = Template.bind({});
-isGoing.args = {
+isRead.args = {
   read: true
 };

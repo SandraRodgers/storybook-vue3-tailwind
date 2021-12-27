@@ -8,29 +8,38 @@
       shadow-md
       rounded-lg
       text-gray-600
-      relative
       p-4
     "
   >
-    <i
+    <div
       class="
-        fas
-        fa-trash
-        text-gray-400 text-lg
-        absolute
-        right-4
-        top-2
-        cursor-pointer
-        hover:brightness-90
-        transition
-        duration-200
-        ease-in-out
+        flex
+        items-center
+        justify-between
+        gap-4
+        border-b border-gray-200
+        pb-2
       "
-    ></i>
-    <h4 class="font-bold border-b border-gray-200 pb-2">
-      <i class="fas fa-envelope text-gray-400 mr-2"></i>
-      This is the message title
-    </h4>
+    >
+      <h4 class="block font-bold">
+        <i class="mr-2" :class="readClasses"></i>
+        This is the message title
+      </h4>
+      <i
+        class="
+          block
+          fas
+          fa-trash
+          text-gray-400
+          cursor-pointer
+          hover:brightness-90
+          transition
+          duration-200
+          ease-in-out
+        "
+      ></i>
+    </div>
+
     <p class="text-sm">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
       exercitationem aperiam eaque, amet ipsam magni et similique illum alias
@@ -44,13 +53,26 @@
   </div>
 </template>
 
+//fas fa-envelope text-indigo-600
+
 <script>
+import { reactive, computed } from 'vue'
+
 export default {
   name: 'NotificationCard',
   props: {
     read: {
       type: Boolean,
       required: false
+    }
+  },
+  setup(props) {
+    props = reactive(props)
+    return {
+      readClasses: computed(() => ({
+        'fas fa-envelope-open text-gray-400': props.read,
+        'fas fa-envelope text-indigo-700': !props.read
+      }))
     }
   }
 }
