@@ -2,12 +2,13 @@
   <button
     class="
       rounded-full
-      shadow-lg
+      shadow-md
       px-4
       hover:brightness-90
       transition
       duration-200
       ease-in-out
+      hover:shadow-lg hover:-translate-y-1
     "
     :class="classes"
   >
