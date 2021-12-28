@@ -16,15 +16,7 @@
         </div>
       </a>
     </div>
-    <div
-      class="
-        bg-white
-        border border-gray-100
-        rounded-b-lg
-        shadow-md
-        hover:shadow-lg
-      "
-    >
+    <div class="bg-white border border-gray-100 rounded-b-lg shadow-md">
       <div class="relative">
         <div
           v-if="!isMine"
@@ -81,7 +73,9 @@
       <div class="flex flex-col gap-3 p-4 mt-2">
         <div class="font-bold">
           <a href="#" class="block text-lg">Title of the Big Event</a>
-          <div class="text-gray-600 text-xs">by John David Smith</div>
+          <div v-if="!isMine" class="text-gray-600 text-xs">
+            by John David Smith
+          </div>
         </div>
         <div class="flex flex-col gap-2 text-sm">
           <div class="font-bold text-indigo-700">Fri, Dec 17, 10:00 PM</div>

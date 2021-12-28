@@ -7,7 +7,6 @@
         bg-white
         border border-gray-100
         shadow-md
-        hover:shadow-lg
         rounded-lg
         p-4
       "
