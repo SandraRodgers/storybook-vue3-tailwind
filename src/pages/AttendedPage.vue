@@ -1,5 +1,5 @@
 <template>
-  <x-with-sidebar-layout>
+  <x-layout.with-sidebar>
     <div
       class="
         flex flex-col
@@ -15,7 +15,7 @@
         <h1 class="font-bold text-2xl">Plans I've Attended</h1>
       </div>
       <div class="flex flex-col lg:flex-row items-center gap-4">
-        <x-select-input name="sort" id="sort">
+        <x-input.select name="sort" id="sort">
           <option value="">Sort by</option>
           <option value="ca">Cost (Asc)</option>
           <option value="cd">Cost (Desc)</option>
@@ -23,27 +23,26 @@
           <option value="dd">Date (Desc)</option>
           <option value="ga"># Going (Asc)</option>
           <option value="gd"># Going (Desc)</option>
-        </x-select-input>
-        <x-text-input type="search" placeholder="Search for plans..." />
+        </x-input.select>
+        <x-input.text type="search" placeholder="Search for plans..." />
       </div>
     </div>
     <div class="flex flex-col sm:flex-row flex-wrap -m-3">
-      <x-event-card />
-      <x-event-card going />
-      <x-event-card declined />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
-      <x-event-card />
+      <x-card.event />
+      <x-card.event going />
+      <x-card.event declined />
+      <x-card.event />
+      <x-card.event />
+      <x-card.event />
+      <x-card.event />
+      <x-card.event />
+      <x-card.event />
+      <x-card.event />
     </div>
-  </x-with-sidebar-layout>
+  </x-layout.with-sidebar>
 </template>
 
 <script>
-import ButtonElement from '../components/elements/ButtonElement.vue'
 import EventCard from '../components/cards/EventCard.vue'
 import SelectInput from '../components/inputs/SelectInput.vue'
 import TextInput from '../components/inputs/TextInput.vue'
@@ -52,11 +51,10 @@ import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 export default {
   name: 'AttendedPage',
   components: {
-    'x-button-element': ButtonElement,
-    'x-event-card': EventCard,
-    'x-select-input': SelectInput,
-    'x-text-input': TextInput,
-    'x-with-sidebar-layout': WithSidebarLayout
+    'x-card.event': EventCard,
+    'x-input.select': SelectInput,
+    'x-input.text': TextInput,
+    'x-layout.with-sidebar': WithSidebarLayout
   }
 }
 </script>

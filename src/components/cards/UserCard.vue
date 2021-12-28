@@ -29,20 +29,20 @@
         Friends since Fri Nov 13th, 2021
       </div>
       <div v-if="friendRequest" class="flex items-center justify-center gap-4">
-        <x-button-element label="Accept" small success />
-        <x-button-element label="Decline" small danger />
+        <x-elements.button label="Accept" small success />
+        <x-elements.button label="Decline" small danger />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Button from '../elements/ButtonElement.vue'
+import ButtonElement from '../elements/ButtonElement.vue'
 
 export default {
   name: 'UserCard',
   components: {
-    'x-button-element': Button
+    'x-elements.button': ButtonElement
   },
   props: {
     friend: {

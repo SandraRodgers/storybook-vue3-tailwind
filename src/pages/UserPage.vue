@@ -1,5 +1,5 @@
 <template>
-  <x-with-sidebar-layout>
+  <x-layout.with-sidebar>
     <div
       class="
         flex flex-col
@@ -103,28 +103,28 @@
     <div v-else class="mt-4">
       <div v-show="selection === 'plans'">
         <h2 class="text-xl font-bold mb-4">John's Plans</h2>
-        <x-flex-wrap>
-          <x-event-card />
-          <x-event-card />
-        </x-flex-wrap>
+        <x-layouts.flex-wrap>
+          <x-card.event />
+          <x-card.event />
+        </x-layouts.flex-wrap>
       </div>
       <div v-show="selection === 'attending'">
         <h2 class="text-xl font-bold mb-4">Attending</h2>
-        <x-flex-wrap>
-          <x-event-card />
-        </x-flex-wrap>
+        <x-layouts.flex-wrap>
+          <x-card.event />
+        </x-layouts.flex-wrap>
       </div>
       <div v-show="selection === 'attended'">
         <h2 class="text-xl font-bold mb-4">Attended</h2>
-        <x-flex-wrap>
-          <x-event-card />
-          <x-event-card />
-          <x-event-card />
-          <x-event-card />
-        </x-flex-wrap>
+        <x-layouts.flex-wrap>
+          <x-card.event />
+          <x-card.event />
+          <x-card.event />
+          <x-card.event />
+        </x-layouts.flex-wrap>
       </div>
     </div>
-  </x-with-sidebar-layout>
+  </x-layout.with-sidebar>
 </template>
 
 <script>
@@ -141,9 +141,9 @@ export default {
     }
   },
   components: {
-    'x-event-card': EventCard,
-    'x-with-sidebar-layout': WithSidebarLayout,
-    'x-flex-wrap': FlexWrap
+    'x-card.event': EventCard,
+    'x-layout.with-sidebar': WithSidebarLayout,
+    'x-layouts.flex-wrap': FlexWrap
   },
   data() {
     return {

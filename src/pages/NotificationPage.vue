@@ -1,17 +1,17 @@
 <template>
-  <x-with-sidebar-layout>
+  <x-layout.with-sidebar>
     <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
       <h2 class="block font-bold text-xl">You have 3 messages</h2>
       <div class="flex items-center gap-4">
-        <x-button-element label="Mark all as read" />
+        <x-element.button label="Mark all as read" />
       </div>
     </div>
     <div class="flex flex-col gap-4 mt-8">
-      <x-notification-card />
-      <x-notification-card read />
-      <x-notification-card read />
+      <x-card.notification />
+      <x-card.notification read />
+      <x-card.notification read />
     </div>
-  </x-with-sidebar-layout>
+  </x-layout.with-sidebar>
 </template>
 
 <script>
@@ -22,9 +22,9 @@ import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 export default {
   name: 'NotificationPage',
   components: {
-    'x-notification-card': NotificationCard,
-    'x-button-element': ButtonElement,
-    'x-with-sidebar-layout': WithSidebarLayout
+    'x-card.notification': NotificationCard,
+    'x-element.button': ButtonElement,
+    'x-layout.with-sidebar': WithSidebarLayout
   }
 }
 </script>

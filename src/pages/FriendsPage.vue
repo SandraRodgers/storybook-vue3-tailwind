@@ -1,5 +1,5 @@
 <template>
-  <x-with-sidebar-layout>
+  <x-layout.with-sidebar>
     <div
       class="
         flex flex-col
@@ -15,29 +15,29 @@
         <h1 class="font-bold text-2xl">My Friends</h1>
       </div>
       <div class="flex flex-col lg:flex-row items-center gap-4">
-        <x-select-input name="sort" id="sort">
+        <x-input.select name="sort" id="sort">
           <option value="">Sort by</option>
           <option value="ca">Name (Asc)</option>
           <option value="cd">Name (Desc)</option>
           <option value="da">Date (Asc)</option>
           <option value="dd">Date (Desc)</option>
-        </x-select-input>
-        <x-text-input type="search" placeholder="Search for friends..." />
+        </x-input.select>
+        <x-input.text type="search" placeholder="Search for friends..." />
       </div>
     </div>
     <div class="flex flex-col sm:flex-row flex-wrap -m-3">
-      <x-user-card friend />
-      <x-user-card friend />
-      <x-user-card friend />
-      <x-user-card friend />
-      <x-user-card friend />
-      <x-user-card friend />
-      <x-user-card friend />
-      <x-user-card friend />
-      <x-user-card friend />
-      <x-user-card friend />
+      <x-card.user friend />
+      <x-card.user friend />
+      <x-card.user friend />
+      <x-card.user friend />
+      <x-card.user friend />
+      <x-card.user friend />
+      <x-card.user friend />
+      <x-card.user friend />
+      <x-card.user friend />
+      <x-card.user friend />
     </div>
-  </x-with-sidebar-layout>
+  </x-layout.with-sidebar>
 </template>
 
 <script>
@@ -50,11 +50,11 @@ import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 export default {
   name: 'FriendsPage',
   components: {
-    'x-button-element': ButtonElement,
-    'x-user-card': UserCard,
-    'x-select-input': SelectInput,
-    'x-text-input': TextInput,
-    'x-with-sidebar-layout': WithSidebarLayout
+    'x-element.button': ButtonElement,
+    'x-card.user': UserCard,
+    'x-input.select': SelectInput,
+    'x-input.text': TextInput,
+    'x-layout.with-sidebar': WithSidebarLayout
   }
 }
 </script>

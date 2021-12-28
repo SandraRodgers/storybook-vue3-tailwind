@@ -22,7 +22,7 @@
       }"
     >
       <slot name="sidebar">
-        <x-side-bar @close-sidebar="onCloseSidebar" />
+        <x-bars.side @close-sidebar="onCloseSidebar" />
       </slot>
     </div>
     <div
@@ -37,7 +37,7 @@
     >
       <div class="flex flex-col gap-4">
         <slot name="header">
-          <x-header-bar @open-sidebar="onOpenSidebar" />
+          <x-bars.header @open-sidebar="onOpenSidebar" />
         </slot>
         <div class="px-8 pb-8">
           <slot>
@@ -104,7 +104,7 @@
       </div>
       <div>
         <slot name="footer">
-          <x-footer-bar />
+          <x-bars.footer />
         </slot>
       </div>
     </div>
@@ -119,9 +119,9 @@ import SideBar from '../components/bars/SideBar.vue'
 export default {
   name: 'WithSidebarLayout',
   components: {
-    'x-header-bar': HeaderBar,
-    'x-footer-bar': FooterBar,
-    'x-side-bar': SideBar
+    'x-bars.header': HeaderBar,
+    'x-bars.footer': FooterBar,
+    'x-bars.side': SideBar
   },
   data() {
     return {

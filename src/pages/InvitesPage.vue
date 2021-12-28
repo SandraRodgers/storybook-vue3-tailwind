@@ -1,5 +1,5 @@
 <template>
-  <x-with-sidebar-layout>
+  <x-layout.with-sidebar>
     <div
       class="
         flex flex-col
@@ -15,7 +15,7 @@
         <h1 class="font-bold text-2xl">My Invites</h1>
       </div>
       <div class="flex flex-col lg:flex-row items-center gap-4">
-        <x-select-input name="sort" id="sort">
+        <x-input.select name="sort" id="sort">
           <option value="">Sort by</option>
           <option value="ca">Cost (Asc)</option>
           <option value="cd">Cost (Desc)</option>
@@ -24,23 +24,23 @@
           <option value="ga"># Going (Asc)</option>
           <option value="gd"># Going (Desc)</option>
           <option value="ib">Invited By</option>
-        </x-select-input>
-        <x-text-input type="search" placeholder="Search for plans..." />
+        </x-input.select>
+        <x-input.text type="search" placeholder="Search for plans..." />
       </div>
     </div>
     <div class="flex flex-col sm:flex-row flex-wrap -m-3">
-      <x-event-card invited-by="John David Smith" going />
-      <x-event-card invited-by="John David Smith" not-going />
-      <x-event-card invited-by="John David Smith" />
-      <x-event-card invited-by="John David Smith" />
-      <x-event-card invited-by="John David Smith" />
-      <x-event-card invited-by="John David Smith" />
-      <x-event-card invited-by="John David Smith" />
-      <x-event-card invited-by="John David Smith" />
-      <x-event-card invited-by="John David Smith" />
-      <x-event-card invited-by="John David Smith" />
+      <x-card.event invited-by="John David Smith" going />
+      <x-card.event invited-by="John David Smith" not-going />
+      <x-card.event invited-by="John David Smith" />
+      <x-card.event invited-by="John David Smith" />
+      <x-card.event invited-by="John David Smith" />
+      <x-card.event invited-by="John David Smith" />
+      <x-card.event invited-by="John David Smith" />
+      <x-card.event invited-by="John David Smith" />
+      <x-card.event invited-by="John David Smith" />
+      <x-card.event invited-by="John David Smith" />
     </div>
-  </x-with-sidebar-layout>
+  </x-layout.with-sidebar>
 </template>
 
 <script>
@@ -53,11 +53,11 @@ import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 export default {
   name: 'InvitesPage',
   components: {
-    'x-button-element': ButtonElement,
-    'x-event-card': EventCard,
-    'x-select-input': SelectInput,
-    'x-text-input': TextInput,
-    'x-with-sidebar-layout': WithSidebarLayout
+    'x-element.button': ButtonElement,
+    'x-card.event': EventCard,
+    'x-input.select': SelectInput,
+    'x-input.text': TextInput,
+    'x-layout.with-sidebar': WithSidebarLayout
   }
 }
 </script>

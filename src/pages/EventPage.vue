@@ -1,5 +1,5 @@
 <template>
-  <x-with-sidebar-layout>
+  <x-layout.with-sidebar>
     <!-- private event -->
     <div
       v-if="isPrivate"
@@ -74,8 +74,8 @@
               pb-8
             "
           >
-            <x-button-element label="I'm Going" success full-width />
-            <x-button-element label="I'm Not Going" danger full-width />
+            <x-element.button label="I'm Going" success full-width />
+            <x-element.button label="I'm Not Going" danger full-width />
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@
       </div>
     </div>
     <!-- end public event -->
-  </x-with-sidebar-layout>
+  </x-layout.with-sidebar>
 </template>
 
 <script>
@@ -140,8 +140,8 @@ export default {
     }
   },
   components: {
-    'x-button-element': ButtonElement,
-    'x-with-sidebar-layout': WithSidebarLayout
+    'x-element.button': ButtonElement,
+    'x-layout.with-sidebar': WithSidebarLayout
   },
   data() {
     return {
