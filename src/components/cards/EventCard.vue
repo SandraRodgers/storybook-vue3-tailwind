@@ -30,42 +30,20 @@
           v-if="!isMine"
           class="absolute top-3 right-3 flex items-center gap-3"
         >
-          <i
+          <x-element.icon-button
             v-if="notGoing || !statusMessage"
-            class="
-              fas
-              fa-check-circle
-              rounded-full
-              text-white
-              bg-green-500
-              border-2 border-white
-              shadow-md
-              p-1
-              cursor-pointer
-              transition
-              duration-200
-              ease-in-out
-              hover:shadow-lg hover:-translate-y-1 hover:bg-green-600
-            "
-          ></i>
-          <i
+            color="bg-green-500"
+            border-color="border-white"
+            icon="fas fa-check-circle"
+            icon-color="text-white"
+          />
+          <x-element.icon-button
             v-if="going || !statusMessage"
-            class="
-              fas
-              fa-minus-circle
-              rounded-full
-              text-white
-              bg-red-500
-              border-2 border-white
-              shadow-md
-              p-1
-              cursor-pointer
-              transition
-              duration-200
-              ease-in-out
-              hover:shadow-lg hover:-translate-y-1 hover:bg-red-600
-            "
-          ></i>
+            color="bg-red-500"
+            border-color="border-white"
+            icon="fas fa-minus-circle"
+            icon-color="text-white"
+          />
         </div>
 
         <img
@@ -127,12 +105,12 @@
 </template>
 
 <script>
-import Button from '../elements/ButtonElement.vue'
+import IconButtonElement from '../elements/IconButtonElement.vue'
 
 export default {
   name: 'EventCard',
   components: {
-    'x-button-element': Button
+    'x-element.icon-button': IconButtonElement
   },
   props: {
     going: {
