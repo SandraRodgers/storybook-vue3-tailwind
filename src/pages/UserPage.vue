@@ -104,23 +104,23 @@
       <div v-show="selection === 'plans'">
         <h2 class="text-xl font-bold mb-4">John's Plans</h2>
         <x-layouts.flex-wrap>
-          <x-card.event />
-          <x-card.event />
+          <x-card.plan />
+          <x-card.plan />
         </x-layouts.flex-wrap>
       </div>
       <div v-show="selection === 'attending'">
         <h2 class="text-xl font-bold mb-4">Attending</h2>
         <x-layouts.flex-wrap>
-          <x-card.event />
+          <x-card.plan />
         </x-layouts.flex-wrap>
       </div>
       <div v-show="selection === 'attended'">
         <h2 class="text-xl font-bold mb-4">Attended</h2>
         <x-layouts.flex-wrap>
-          <x-card.event />
-          <x-card.event />
-          <x-card.event />
-          <x-card.event />
+          <x-card.plan />
+          <x-card.plan />
+          <x-card.plan />
+          <x-card.plan />
         </x-layouts.flex-wrap>
       </div>
     </div>
@@ -128,7 +128,7 @@
 </template>
 
 <script>
-import EventCard from '../components/cards/EventCard.vue'
+import PlanCard from '../components/cards/PlanCard.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 import FlexWrap from '../layouts/FlexWrap.vue'
 
@@ -141,7 +141,7 @@ export default {
     }
   },
   components: {
-    'x-card.event': EventCard,
+    'x-card.plan': PlanCard,
     'x-layout.with-sidebar': WithSidebarLayout,
     'x-layouts.flex-wrap': FlexWrap
   },

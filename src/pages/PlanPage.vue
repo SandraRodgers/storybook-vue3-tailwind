@@ -1,6 +1,6 @@
 <template>
   <x-layout.with-sidebar>
-    <!-- private event -->
+    <!-- private plan -->
     <div
       v-if="isPrivate"
       class="
@@ -13,14 +13,14 @@
       "
     >
       <i class="fas fa-lock text-8xl text-gray-200"></i>
-      <p class="font-bold text-lg">This event is private.</p>
+      <p class="font-bold text-lg">This plan is private.</p>
       <p class="text-md">
-        You will not be able to view this event unless you are invited.
+        You will not be able to view this plan unless you are invited.
       </p>
     </div>
-    <!-- end private event -->
+    <!-- end private plan -->
 
-    <!-- public event -->
+    <!-- public plan -->
     <div
       v-else
       class="
@@ -59,7 +59,7 @@
             <div class="text-indigo-700">Fri, Dec 17, 10:00 PM</div>
           </div>
           <div>
-            <span class="block text-2xl">Title of the Big Event</span>
+            <span class="block text-2xl">Title of the Big Plan</span>
             <div class="font-normal text-gray-600 text-sm mt-2">
               by <a href="#">John David Smith</a>
             </div>
@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-    <!-- end public event -->
+    <!-- end public plan -->
   </x-layout.with-sidebar>
 </template>
 
@@ -132,7 +132,7 @@ import ButtonElement from '../components/elements/ButtonElement.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 
 export default {
-  name: 'EventPage',
+  name: 'PlanPage',
   props: {
     isPrivate: {
       type: Boolean,

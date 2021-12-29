@@ -29,23 +29,23 @@
       </div>
     </div>
     <div class="flex flex-col sm:flex-row flex-wrap -m-3">
-      <x-card.event is-mine />
-      <x-card.event is-mine />
-      <x-card.event is-mine />
-      <x-card.event is-mine />
-      <x-card.event is-mine />
-      <x-card.event is-mine />
-      <x-card.event is-mine />
-      <x-card.event is-mine />
-      <x-card.event is-mine />
-      <x-card.event is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
+      <x-card.plan is-mine />
     </div>
   </x-layout.with-sidebar>
 </template>
 
 <script>
 import ButtonElement from '../components/elements/ButtonElement.vue'
-import EventCard from '../components/cards/EventCard.vue'
+import PlanCard from '../components/cards/PlanCard.vue'
 import SelectInput from '../components/inputs/SelectInput.vue'
 import TextInput from '../components/inputs/TextInput.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
@@ -54,7 +54,7 @@ export default {
   name: 'MyPlansPage',
   components: {
     'x-element.button': ButtonElement,
-    'x-card.event': EventCard,
+    'x-card.plan': PlanCard,
     'x-input.select': SelectInput,
     'x-input.text': TextInput,
     'x-layout.with-sidebar': WithSidebarLayout

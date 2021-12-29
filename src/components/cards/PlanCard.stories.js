@@ -1,10 +1,10 @@
 require('../../styles/main.css');
 
-import EventCard from './EventCard.vue';
+import PlanCard from './PlanCard.vue';
 
 export default {
-  title: 'Cards/EventCard',
-  component: EventCard,
+  title: 'Cards/PlanCard',
+  component: PlanCard,
   argTypes: {
     going: { control: 'boolean' },
     notGoing: { control: 'boolean' },
@@ -14,11 +14,11 @@ export default {
 };
 
 const Template = (args) => ({
-  components: { EventCard },
+  components: { PlanCard },
   setup() {
     return { args };
   },
-  template: '<event-card v-bind="args" />',
+  template: '<plan-card v-bind="args" />',
 });
 
 export const Primary = Template.bind({});

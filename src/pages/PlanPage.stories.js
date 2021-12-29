@@ -1,10 +1,10 @@
 require('../styles/main.css');
 
-import EventPage from './EventPage.vue';
+import PlanPage from './PlanPage.vue';
 
 export default {
-    title: 'Pages/EventPage',
-    component: EventPage,
+    title: 'Pages/PlanPage',
+    component: PlanPage,
     argTypes: {
         isPrivate: { control: 'boolean' },
     },
@@ -14,11 +14,11 @@ export default {
 };
 
 const Template = (args) => ({
-    components: { EventPage },
+    components: { PlanPage },
     setup() {
         return { args };
     },
-    template: '<event-page v-bind="args" />',
+    template: '<plan-page v-bind="args" />',
 });
 
 export const Primary = Template.bind({});

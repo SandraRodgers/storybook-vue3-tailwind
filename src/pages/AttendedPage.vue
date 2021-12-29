@@ -28,22 +28,22 @@
       </div>
     </div>
     <div class="flex flex-col sm:flex-row flex-wrap -m-3">
-      <x-card.event />
-      <x-card.event going />
-      <x-card.event declined />
-      <x-card.event />
-      <x-card.event />
-      <x-card.event />
-      <x-card.event />
-      <x-card.event />
-      <x-card.event />
-      <x-card.event />
+      <x-card.plan />
+      <x-card.plan going />
+      <x-card.plan declined />
+      <x-card.plan />
+      <x-card.plan />
+      <x-card.plan />
+      <x-card.plan />
+      <x-card.plan />
+      <x-card.plan />
+      <x-card.plan />
     </div>
   </x-layout.with-sidebar>
 </template>
 
 <script>
-import EventCard from '../components/cards/EventCard.vue'
+import PlanCard from '../components/cards/PlanCard.vue'
 import SelectInput from '../components/inputs/SelectInput.vue'
 import TextInput from '../components/inputs/TextInput.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
@@ -51,7 +51,7 @@ import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 export default {
   name: 'AttendedPage',
   components: {
-    'x-card.event': EventCard,
+    'x-card.plan': PlanCard,
     'x-input.select': SelectInput,
     'x-input.text': TextInput,
     'x-layout.with-sidebar': WithSidebarLayout

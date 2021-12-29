@@ -102,7 +102,7 @@
 import IconButtonElement from '../elements/IconButtonElement.vue'
 
 export default {
-  name: 'EventCard',
+  name: 'PlanCard',
   components: {
     'x-element.icon-button': IconButtonElement
   },
