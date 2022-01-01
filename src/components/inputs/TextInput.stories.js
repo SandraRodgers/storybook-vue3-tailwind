@@ -12,6 +12,7 @@ export default {
     name: { control: 'text' },
     id: { control: 'text' },
     error: { control: 'text' },
+    labelHidden: { control: 'boolean' },
   },
 };
 
@@ -34,4 +35,10 @@ export const hasErrors = Template.bind({});
 hasErrors.args = {
   label: 'Text Input',
   error: 'This field is required'
+};
+
+export const hiddenLabel = Template.bind({});
+hiddenLabel.args = {
+  label: 'Text Input',
+  labelHidden: true
 };

@@ -1,12 +1,23 @@
 <template>
-  <div class="w-full flex flex-col gap-1">
-    <label :for="id || name">{{ label }}</label>
+  <div class="w-full flex flex-col gap-1 text-indigo-700 uppercase text-sm">
+    <label :class="{ hidden: labelHidden }" :for="id || name">
+      {{ label }}
+    </label>
     <input
       :name="name"
       :id="id || name"
       :type="type"
       :placeholder="placeholder"
-      class="w-full rounded-lg bg-white border border-black text-black p-2 h-12"
+      class="
+        w-full
+        rounded-lg
+        bg-white
+        border-2 border-gray-400
+        text-black
+        py-2
+        px-4
+        h-12
+      "
     />
     <div
       class="text-red-400 text-xs"
@@ -46,6 +57,10 @@ export default {
     error: {
       type: String,
       default: ''
+    },
+    labelHidden: {
+      type: Boolean,
+      default: false
     }
   }
 }
