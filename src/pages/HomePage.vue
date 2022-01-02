@@ -38,7 +38,7 @@
           p-6
         "
       >
-        <h2 class="block text-xl font-bold text-indigo-700 text-center">
+        <h2 class="block text-lg font-bold text-indigo-700 text-center">
           Sign In To Get Started!
         </h2>
         <hr class="bg-gray-300" />
@@ -72,7 +72,7 @@
             shadow-lg
             px-6
             py-4
-            text-white text-center
+            text-white text-center text-sm
             border-t-8 border-indigo-900
           "
         >
