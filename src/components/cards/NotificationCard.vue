@@ -7,9 +7,12 @@
       border border-gray-200
       shadow-md
       rounded-lg
-      text-gray-600
       p-4
     "
+    :class="{
+      'text-gray-600': !read,
+      'text-gray-400': read
+    }"
   >
     <div
       class="
@@ -22,7 +25,7 @@
       "
     >
       <h4 class="block font-bold">
-        <i class="mr-2" :class="readClasses"></i>
+        <i class="fas mr-2" :class="readClasses"></i>
         This is the message title
       </h4>
       <i
@@ -30,7 +33,7 @@
           block
           fas
           fa-trash
-          text-gray-400
+          text-gray-600
           cursor-pointer
           hover:brightness-90
           transition
@@ -70,8 +73,8 @@ export default {
     props = reactive(props)
     return {
       readClasses: computed(() => ({
-        'fas fa-envelope-open text-gray-400': props.read,
-        'fas fa-envelope text-indigo-700': !props.read
+        'fas fa-envelope-open': props.read,
+        'fas fa-envelope': !props.read
       }))
     }
   }

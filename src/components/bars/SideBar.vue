@@ -49,7 +49,7 @@
           </li>
         </ul>
       </div>
-      <div class="text-sm">&copy; Outplans 2021</div>
+      <div class="text-xs">&copy; Outplans 2021</div>
     </div>
   </div>
 </template>
