@@ -9,6 +9,9 @@
         duration-200
         cursor-pointer
         text-indigo-600
+        border-black
+        focus:ring-0 focus:shadow-none
+        ring-offset-0
       "
       type="checkbox"
       :value="value"
