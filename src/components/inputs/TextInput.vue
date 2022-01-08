@@ -1,6 +1,10 @@
 <template>
-  <div class="w-full flex flex-col gap-1 text-indigo-700 uppercase text-sm">
-    <label :class="{ hidden: labelHidden }" :for="id || name">
+  <div class="w-full flex flex-col gap-1 text-black">
+    <label
+      class="text-xs uppercase"
+      :class="{ hidden: labelHidden }"
+      :for="id || name"
+    >
       {{ label }}
     </label>
     <input
@@ -12,7 +16,7 @@
         w-full
         rounded-lg
         bg-white
-        border-2 border-gray-400
+        border border-black
         text-black
         py-2
         px-4

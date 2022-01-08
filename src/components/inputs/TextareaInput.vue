@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-col gap-1">
-    <label :for="id || name">{{ label }}</label>
+    <label class="text-xs uppercase" :for="id || name">{{ label }}</label>
     <textarea
       :name="name"
       :id="id || name"

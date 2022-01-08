@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-col gap-1">
-    <label :for="id || name">{{ label }}</label>
+    <label class="text-xs uppercase" :for="id || name">{{ label }}</label>
     <select
       class="w-full rounded-lg bg-white border border-black text-black p-3 h-12"
     >
