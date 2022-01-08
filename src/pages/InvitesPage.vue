@@ -28,7 +28,7 @@
         <x-input.text type="search" placeholder="Search for plans..." />
       </div>
     </div>
-    <div class="flex flex-col sm:flex-row flex-wrap -m-3">
+    <x-card.wrapper>
       <x-card.plan invited-by="John David Smith" going />
       <x-card.plan invited-by="John David Smith" not-going />
       <x-card.plan invited-by="John David Smith" />
@@ -39,13 +39,14 @@
       <x-card.plan invited-by="John David Smith" />
       <x-card.plan invited-by="John David Smith" />
       <x-card.plan invited-by="John David Smith" />
-    </div>
+    </x-card.wrapper>
   </x-layout.with-sidebar>
 </template>
 
 <script>
 import ButtonElement from '../components/elements/ButtonElement.vue'
 import PlanCard from '../components/cards/PlanCard.vue'
+import Wrapper from '../components/cards/Wrapper.vue'
 import SelectInput from '../components/inputs/SelectInput.vue'
 import TextInput from '../components/inputs/TextInput.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
@@ -55,6 +56,7 @@ export default {
   components: {
     'x-element.button': ButtonElement,
     'x-card.plan': PlanCard,
+    'x-card.wrapper': Wrapper,
     'x-input.select': SelectInput,
     'x-input.text': TextInput,
     'x-layout.with-sidebar': WithSidebarLayout

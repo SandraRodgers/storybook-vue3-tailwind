@@ -103,25 +103,25 @@
     <div v-else class="mt-4">
       <div v-show="selection === 'plans'">
         <h2 class="text-xl font-bold mb-4">John's Plans</h2>
-        <x-layouts.flex-wrap>
+        <x-card.wrapper>
           <x-card.plan />
           <x-card.plan />
-        </x-layouts.flex-wrap>
+        </x-card.wrapper>
       </div>
       <div v-show="selection === 'attending'">
         <h2 class="text-xl font-bold mb-4">Attending</h2>
-        <x-layouts.flex-wrap>
+        <x-card.wrapper>
           <x-card.plan />
-        </x-layouts.flex-wrap>
+        </x-card.wrapper>
       </div>
       <div v-show="selection === 'attended'">
         <h2 class="text-xl font-bold mb-4">Attended</h2>
-        <x-layouts.flex-wrap>
+        <x-card.wrapper>
           <x-card.plan />
           <x-card.plan />
           <x-card.plan />
           <x-card.plan />
-        </x-layouts.flex-wrap>
+        </x-card.wrapper>
       </div>
     </div>
   </x-layout.with-sidebar>
@@ -130,7 +130,7 @@
 <script>
 import PlanCard from '../components/cards/PlanCard.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
-import FlexWrap from '../layouts/FlexWrap.vue'
+import Wrapper from '../cards/Wrapper.vue'
 
 export default {
   name: 'UserPage',
@@ -143,7 +143,7 @@ export default {
   components: {
     'x-card.plan': PlanCard,
     'x-layout.with-sidebar': WithSidebarLayout,
-    'x-layouts.flex-wrap': FlexWrap
+    'x-card.wrapper': Wrapper
   },
   data() {
     return {

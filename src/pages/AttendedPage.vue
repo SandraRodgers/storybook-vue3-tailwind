@@ -27,7 +27,7 @@
         <x-input.text type="search" placeholder="Search for plans..." />
       </div>
     </div>
-    <div class="flex flex-col sm:flex-row flex-wrap -m-3">
+    <x-card.wrapper>
       <x-card.plan />
       <x-card.plan going />
       <x-card.plan declined />
@@ -38,12 +38,13 @@
       <x-card.plan />
       <x-card.plan />
       <x-card.plan />
-    </div>
+    </x-card.wrapper>
   </x-layout.with-sidebar>
 </template>
 
 <script>
 import PlanCard from '../components/cards/PlanCard.vue'
+import Wrapper from '../components/cards/Wrapper.vue'
 import SelectInput from '../components/inputs/SelectInput.vue'
 import TextInput from '../components/inputs/TextInput.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
@@ -54,7 +55,8 @@ export default {
     'x-card.plan': PlanCard,
     'x-input.select': SelectInput,
     'x-input.text': TextInput,
-    'x-layout.with-sidebar': WithSidebarLayout
+    'x-layout.with-sidebar': WithSidebarLayout,
+    'x-card.wrapper': Wrapper
   }
 }
 </script>

@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'FlexWrap'
+  name: 'Wrapper'
 }
 </script>
