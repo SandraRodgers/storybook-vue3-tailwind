@@ -3,18 +3,18 @@
     <div class="flex flex-col gap-2">
       <div class="text-center text-2xl text-gray-500 font-bold">Outplans</div>
       <div class="text-center text-sm text-gray-400">
-        Simplifying the way you make plans!
+        Simplify the way you make plans!
       </div>
     </div>
 
     <div
       class="
-        flex flex-col
-        gap-2
-        md:flex-row
-        items-center
-        md:justify-around
         text-gray-500 text-sm
+        flex flex-col
+        items-center
+        md:flex-row md:justify-center
+        gap-2
+        md:gap-8
       "
     >
       <a href="#">About Us</a>

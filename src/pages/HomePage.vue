@@ -3,7 +3,7 @@
     <div
       id="hero"
       class="
-        h-80
+        h-96
         flex flex-col
         md:flex-row
         items-center
@@ -19,7 +19,7 @@
       <div class="text-white">
         <h1 class="text-6xl xl:text-8xl font-bold">Outplans</h1>
         <p class="xl:text-lg xl:mt-2 md:ml-2">
-          Simplifying the way you make plans!
+          Simplify the way you make plans!
         </p>
       </div>
       <div
@@ -27,8 +27,7 @@
           flex flex-col
           gap-4
           w-full
-          sm:w-80
-          md:w-96
+          sm:w-96
           bg-white
           border border-gray-100
           rounded-md
