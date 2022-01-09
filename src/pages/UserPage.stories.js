@@ -7,6 +7,7 @@ export default {
     component: UserPage,
     argTypes: {
         isPrivate: { control: 'boolean' },
+        isFriend: { control: 'boolean' },
     },
     parameters: {
         layout: 'fullscreen'
@@ -28,4 +29,9 @@ Primary.args = {
 export const isPrivate = Template.bind({});
 isPrivate.args = {
     isPrivate: true,
+};
+
+export const isFriend = Template.bind({});
+isFriend.args = {
+    isFriend: true,
 };

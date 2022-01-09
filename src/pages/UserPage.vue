@@ -23,6 +23,15 @@
           <div class="text-indigo-700">
             <div class="text-xs">Member since Fri Nov 13th, 2021</div>
           </div>
+          <div class="mt-2">
+            <x-element.button
+              v-if="isFriend"
+              label="Remove Friend"
+              small
+              danger
+            />
+            <x-element.button v-else label="Add Friend" small success />
+          </div>
         </div>
       </div>
       <div
@@ -129,6 +138,7 @@
 
 <script>
 import PlanCard from '../components/cards/PlanCard.vue'
+import ButtonElement from '../components/elements/ButtonElement.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
 import Wrapper from '../components/cards/Wrapper.vue'
 
@@ -138,10 +148,15 @@ export default {
     isPrivate: {
       type: Boolean,
       default: false
+    },
+    isFriend: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
     'x-card.plan': PlanCard,
+    'x-element.button': ButtonElement,
     'x-layout.with-sidebar': WithSidebarLayout,
     'x-card.wrapper': Wrapper
   },
