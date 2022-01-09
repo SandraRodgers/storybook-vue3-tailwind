@@ -18,7 +18,6 @@
             name="email"
             placeholder="Email Address"
             label-hidden
-            autofocus
             required
           />
           <x-input.checkbox

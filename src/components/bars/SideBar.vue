@@ -3,7 +3,7 @@
     class="
       flex flex-col
       bg-indigo-700
-      border-r-4 border-indigo-900
+      border-r-8 border-indigo-900
       text-white
       w-full
       p-8
