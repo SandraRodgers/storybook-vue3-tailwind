@@ -130,7 +130,7 @@
 <script>
 import PlanCard from '../components/cards/PlanCard.vue'
 import WithSidebarLayout from '../layouts/WithSidebarLayout.vue'
-import Wrapper from '../cards/Wrapper.vue'
+import Wrapper from '../components/cards/Wrapper.vue'
 
 export default {
   name: 'UserPage',

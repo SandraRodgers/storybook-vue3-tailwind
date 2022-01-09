@@ -24,8 +24,13 @@
           </div>
         </div>
       </div>
-      <div v-if="friend" class="text-sm text-center text-gray-400">
-        Friends since Fri Nov 13th, 2021
+      <div v-if="friend">
+        <div class="text-sm text-center text-gray-400">
+          Friends since Fri Nov 13th, 2021
+        </div>
+        <div class="flex justify-center mt-2">
+          <x-elements.button label="Remove Friend" small danger />
+        </div>
       </div>
       <div v-if="friendRequest" class="flex items-center justify-center gap-4">
         <x-elements.button label="Accept" small success />
