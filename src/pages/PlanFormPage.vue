@@ -10,7 +10,12 @@
           <x-input.text label="Address" name="address" required />
           <x-input.textarea label="Description" name="description" required />
           <div class="flex items-center gap-4">
-            <x-input.text label="Date/Time" name="when" required />
+            <x-input.text
+              label="Date/Time"
+              name="when"
+              type="datetime-local"
+              required
+            />
             <x-input.text label="Cost" name="cost" />
           </div>
           <div>
