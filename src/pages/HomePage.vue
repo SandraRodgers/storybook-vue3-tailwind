@@ -8,12 +8,12 @@
           md:flex-row
           items-center
           justify-between
-          gap-6
+          gap-12
         "
       >
         <div class="text-white">
-          <h1 class="text-6xl xl:text-8xl font-bold">Outplans</h1>
-          <p class="xl:text-lg xl:mt-2 md:ml-2">
+          <h1 class="text-6xl lg:text-7xl xl:text-8xl font-bold">Outplans</h1>
+          <p class="md:ml-2 xl:text-lg xl:mt-2">
             Simplify the way you make plans!
           </p>
         </div>
@@ -28,8 +28,9 @@
             rounded-md
             shadow-lg
             -mb-24
-            md:-mb-48
-            p-6
+            md:-mb-64
+            py-4
+            px-6
           "
         >
           <h2 class="block text-lg font-bold text-indigo-700 text-center">
@@ -54,7 +55,7 @@
           />
           <x-input.checkbox name="remember" label="Remember me" id="remember" />
           <x-element.button label="Sign in" primary full-width />
-          <div class="text-right text-xs">
+          <div class="text-right text-xs my-2">
             <a href="#">Forgot your password?</a>
           </div>
           <div
@@ -64,13 +65,12 @@
               -mb-6
               rounded-b-md
               shadow-lg
-              px-6
-              py-4
-              text-white text-center text-sm
+              p-5
+              text-white text-center text-lg
               border-t-8 border-indigo-900
             "
           >
-            Or <a href="#" class="underline font-bold">Create An Account</a>
+            or <a href="#" class="underline font-bold">Create An Account!</a>
           </div>
         </div>
       </div>
