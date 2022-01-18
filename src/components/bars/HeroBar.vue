@@ -2,7 +2,7 @@
   <div
     id="hero"
     class="
-      h-96
+      h-120
       bg-gray-200
       border-b-8 border-indigo-900
       py-8

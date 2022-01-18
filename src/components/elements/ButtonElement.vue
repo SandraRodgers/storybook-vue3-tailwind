@@ -2,13 +2,11 @@
   <button
     class="
       rounded-full
-      shadow-md
-      px-4
-      hover:brightness-90
+      shadow-lg
       transition
       duration-200
       ease-in-out
-      hover:shadow-lg
+      hover:shadow-xl
     "
     :class="classes"
   >
@@ -56,19 +54,36 @@ export default {
     fullWidth: {
       type: Boolean,
       default: false
+    },
+    wide: {
+      type: Boolean,
+      default: false
+    },
+    bold: {
+      type: Boolean,
+      default: false
+    },
+    animated: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
     props = reactive(props)
     return {
       classes: computed(() => ({
-        'bg-white text-black border border-black': props.secondary,
-        'bg-indigo-700 text-white border border-indigo-900': !props.secondary,
+        'bg-black text-white border-2 border-white': props.secondary,
+        'bg-indigo-700 text-white border border-indigo-900 hover:brightness-90':
+          !props.secondary,
         'text-xs py-1': props.small,
         'text-md py-2': !props.small,
         'bg-green-500 text-white border border-green-600': props.success,
         'bg-red-500 text-white border border-red-600': props.danger,
-        'w-full': props.fullWidth
+        'px-4': !props.wide,
+        'px-12': props.wide,
+        'font-bold': props.bold,
+        'w-full': props.fullWidth,
+        'hover:-translate-y-1': props.animated
       }))
     }
   }
