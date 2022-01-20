@@ -5,6 +5,9 @@ module.exports = {
       spacing: {
         120: "30rem",
       },
+      fontFamily: {
+        sans: ['Outfit', 'sans-serif']
+      },
     }
   },
   plugins: [
