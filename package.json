@@ -1,5 +1,5 @@
 {
-  "name": "vts",
+  "name": "storybook-vue3-tailwind",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,9 +10,7 @@
     "build-storybook": "build-storybook -o docs-build"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "@tailwindcss/forms": "^0.4.0",
-    "alpinejs": "^3.7.0",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "webpack": "^5.65.0"
